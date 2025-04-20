@@ -1,0 +1,15 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: quick-infra-net
+  namespace: quick-infra-net
+  labels:
+    app: quick-infra-net
+spec:
+  endpoints:
+  - interval: 30s
+    port: metrics # ★ exporter ポート名と一致させる
+  selector:
+    matchLabels:
+      app: quick-infra-net

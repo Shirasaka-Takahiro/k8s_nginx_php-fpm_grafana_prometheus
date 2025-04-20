@@ -1,0 +1,7 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: quick-infra-net
+  labels:
+    name: quick-infra-net
