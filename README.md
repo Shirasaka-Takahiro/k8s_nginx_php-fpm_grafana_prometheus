@@ -9,3 +9,6 @@ kubectl -n quick-infra-net get pods
 # Connecting to nginx container from nginx exporter container
 kubectl -n quick-infra-net exec -it <pod> -c nginx -- \
   curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1/stub_status
+
+# GEt each pod
+docker container ps -a | grep quick

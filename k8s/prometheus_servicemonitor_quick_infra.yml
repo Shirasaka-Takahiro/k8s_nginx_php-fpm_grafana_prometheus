@@ -10,6 +10,7 @@ spec:
   endpoints:
   - interval: 30s
     port: metrics # ★ exporter ポート名と一致させる
+    #port: quick-infra-net
   selector:
     matchLabels:
       app: quick-infra-net
