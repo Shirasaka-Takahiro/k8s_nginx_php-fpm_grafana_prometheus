@@ -1,14 +1,13 @@
 # k8s_nginx_php-fpm_grafana_prometheus
 
+# How to see the content in the browser
+http://example-test.com:30080/
+
 # How to update Docker image deployed by deployment.yml
-kubectl -n quick-infra-net rollout restart deployment quick-infra-net
+kubectl -n example-test rollout restart deployment example-test
 
 # How to get pods detail
-kubectl -n quick-infra-net get pods
-
-# Connecting to nginx container from nginx exporter container
-kubectl -n quick-infra-net exec -it <pod> -c nginx -- \
-  curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1/stub_status
+kubectl -n example-test get pods
 
 # GEt each pod
-docker container ps -a | grep quick
+docker container ps -a | grep example-test

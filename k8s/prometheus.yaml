@@ -26,6 +26,6 @@ spec:
       - key: kubernetes.io/metadata.name
         operator: In
         values:   
-          - quick-infra-net
+          - example-test
           - prometheus
           - default

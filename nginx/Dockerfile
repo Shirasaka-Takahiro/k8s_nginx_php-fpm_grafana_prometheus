@@ -1,5 +1,5 @@
 FROM nginx:latest
-COPY ./conf/quick-infra.net.conf /etc/nginx/conf.d
-RUN mkdir -p /var/www/vhosts/quick-infra.net/public_html
-COPY ./src_dir /var/www/vhosts/quick-infra.net/public_html/
+COPY ./conf/example-test.com.conf /etc/nginx/conf.d
+RUN mkdir -p /var/www/vhosts/example-test.com/public_html
+COPY ./src_dir /var/www/vhosts/example-test.com/public_html/
 EXPOSE 80
